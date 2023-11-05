@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Define a modelagem da caixa como "border-box" para incluir preenchimento e borda no cálculo de largura */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    background-color: black; /* Define o fundo como preto */
+    color: #fff; /* Define a cor do texto como branco */
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    justify-content: space-between; /* Alinha os itens do cabeçalho com espaço entre eles */
+    align-items: center; /* Centraliza verticalmente os itens do cabeçalho */
+    padding: 25px 15px; /* Define o preenchimento do cabeçalho */
+
+}
+
+a {
+    display: flex; /* Centraliza o texto do logotipo */
+    justify-content: space-between; /* Alinha os itens do cabeçalho com espaço entre eles */
+    align-items: center;
+    color: #fff;
+    text-decoration: none; /*Remove sublinhado dos links*/
+}
+
+.Logo { 
+    text-align: center; /* Centraliza o texto do logotipo */
+    font-size: 20px; /* Define o tamanho da fonte para o logotipo */
+    margin-left: 10px; /* Adiciona margem à esquerda do logotipo */
+}
+
+ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex;
+}
+
+li {
+    margin: 6px; /* Define margem de 6px em todos os lados dos itens da lista */
+    padding: 2px; /* Define preenchimento dos itens da lista */
+    align-items: center;
+    font-size: 18px;
+    transition: transform 0.2s; /* Adiciona uma transição suave na propriedade "transform" para futuros efeitos de hover */
+}
+
+section {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens da seção sejam quebrados em várias linhas em telas menores */
+}
+
+article {
+    padding: 2%;
+    height: 100%; /* Define a altura total dos elementos "article" */
+    display: flex;
+    flex-direction: column; /* Define a direção da coluna para os itens flexíveis */
+    flex: 1 0 200px; /* Define a flexibilidade dos itens flexíveis, permitindo que cresçam, mas limitando a 200px */
+    margin: 5px;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente os itens flexíveis */
+}
+
+p {
+    margin-top: 4px;
+    padding: 2px;
+    font-size: large; /* Define o tamanho da fonte para os parágrafos como "large" */
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 0%; /* Remove a margem inferior dos cabeçalhos de terceiro nível */
+}
+
+img {
+    max-width: 100%; /* Define uma largura máxima de 100% para as imagens */
+    transition: transform 0.6s; /* Adiciona uma transição suave na propriedade "transform" das imagens */
+}
+
+li:hover {
+    transform: scale(1.2); /* Define um efeito de zoom quando um item de lista (li) é hover, aumentando em 20% */
+}
+
+img:hover {
+    transform: scale(1.1); /* Define um efeito de zoom quando uma imagem é hover, aumentando em 10% */
+}
+
+@media(max-width: 670px) {
+    ul {
+        flex-direction: column; /* Altera a direção dos itens da lista não ordenada para coluna em telas menores */
+    }
+
+    li {
+        text-align: left;
+        padding: 2px;
+        font-size: 22px;
+        margin: 5px;
+        background-color: gray;
+    }
+
+    article {
+        font-size: 20px;
+        flex: 1 0 45%; /* Aumenta a flexibilidade dos elementos "article" e limita a 45% */
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .Logo {
+        text-align: center;
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    li {
+        text-align: left;
+        padding-left: 10px;
+        font-size: 22px;
+        margin: 10px;
+        background-color: gray;
+        margin-right: 5px;
+    }
+
+    a {
+        text-align: center; /* Alinhe "Logo" ao centro */
+        margin-bottom: 10px;
+    }
+
+    section {
+        grid-template-columns: repeat(1, 2fr); /* Redefine o layout da seção para uma coluna de largura igual */
+        flex-direction: column;
+    }
+
+    article {
+        flex: 1; /* Exibe uma única coluna com todas as imagens */
+    }
+}
+
+/* By João Victor Borges Lourenço*/
